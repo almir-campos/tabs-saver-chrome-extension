@@ -1,0 +1,129 @@
+li{
+    list-style: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    margin: 0 auto;
+    padding: 5px;
+    width: 625px;
+    text-align: left;
+    position: relative;
+}
+nav.tabs{
+  text-align: center;
+}
+.description{
+    color: #666666;
+    font-size: 12px;
+}
+textarea{
+    display: block;
+    clear: both;
+    overflow: auto;
+    width: 500px;
+    height: 300px;
+}
+.json-data{
+    color:#000000;
+    border: 3px solid #666666;
+    border-radius: 5px;
+}
+.info{
+    width: 500px;
+    color: green;
+    font-size: 10px;
+}
+.content li{
+    display: none;
+}
+#files_list li{
+  display: block;
+}
+.content li.import{
+    display: block;
+}
+.tabs{
+    overflow: hidden;
+}
+.tabs li{
+    /*display: inline-block;*/
+    /*background: #DDD;*/
+    /*border: 1px solid #AAA;*/
+    /*margin: 2px;*/
+    /*border-radius: 3px;*/
+    /*padding: 3px;*/
+    /*cursor: pointer;*/
+}
+.settings label{
+    display: block;
+    text-align: left;
+}
+.content ul.list li{
+    margin: 10px 0;
+    display: block;
+}
+legend{
+    text-align: center;
+}
+fieldset fieldset legend{
+  text-align: left;
+}
+fieldset fieldset{
+  margin-bottom: 10px;
+}
+.hints{
+    text-align: left;
+}
+#files_list table{
+  border-bottom: 1px solid #666666;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+#status{
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  z-index: 99;
+  width: 500px;
+  height: 83px;
+  top: 108px;
+  left: 56px;
+  display: none;
+  background: rgba(200,200,200,0.80);
+}
+#status .message{
+  font-family: Verdana;
+  font-size: 20px;
+  color: #000;
+  text-transform: uppercase;
+}
+th{
+  text-align: center;
+}
+fieldset.content{
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #999;
+}
+.form-group{
+    border-bottom: 1px dashed #999;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.last{
+    border: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+input[name=tabs_data]{
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+.bg-gray{
+    background: #f7f7f9;
+}

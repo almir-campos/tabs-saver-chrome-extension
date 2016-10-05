@@ -1,0 +1,132 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+}
+#main{
+    width: 375px;
+    padding: 8px;
+    /*background-image: linear-gradient(bottom, rgb(255,255,255) 0%, rgb(235,235,235) 95%);*/
+    /*background-image: -o-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(235,235,235) 95%);*/
+    /*background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(235,235,235) 95%);*/
+    /*background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(235,235,235) 95%);*/
+    /*background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 0%, rgb(235,235,235) 95%);*/
+
+    /*background-image: -webkit-gradient(*/
+        /*linear,*/
+        /*left bottom,*/
+        /*left top,*/
+        /*color-stop(0, rgb(255,255,255)),*/
+        /*color-stop(0.95, rgb(235,235,235))*/
+    /*);*/
+    background: #f7f7f9;
+}
+#main .like{
+    text-align: center;
+    margin-top: 5px;
+}
+#main{
+    color: #333;
+}
+#main .row{
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+#main h1{
+    text-align: center;
+    font-size: 18px;
+}
+#main h2{
+    text-align: center;
+    font-size: 16px;
+}
+#saved-list ol{
+    font-size: 12px;
+}
+#saved-list .delete,#saved-list .delete-tab{
+    font-size: 12px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+#saved-list .delete-tab{
+    font-size: 10px;
+}
+#saved-list .item{
+    font-size: 14px;
+    /*  color: black;*/
+    text-decoration: none;
+    cursor: pointer;
+}
+#saved-list .tabs-groups .edited-tab li{
+    list-style: none;
+    padding-left: 20px;
+}
+#saved-list .edited-tab{
+    display: none;
+    padding: 0;
+}
+#saved-list .edited-tab a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #000066;
+}
+#saved-list .buttons{
+    cursor: pointer;
+    padding: 0 3px;
+    position: relative;
+    top: 3px;
+}
+#status{
+    height: 13px;
+    padding-left: 10px;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+#status .message,#status .error{
+    font-size: 12px;
+    color: green;
+    margin: 0;
+}
+#status .error{
+    color: red;
+}
+#saved-list ul.tabs-groups li{
+    padding: 3px 0;
+    list-style: none;
+}
+#saved-list ul.tabs-groups{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 16px;
+}
+#saved-list .options{
+    vertical-align: middle;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#saved-list .control{
+    display: none;
+    border: 1px solid #666666;
+    width: 100px;
+    text-align: center;
+    /*background: #eeeeee;*/
+    border-radius:5px;
+    padding: 1px 0;
+}
+#saved-list img{
+    vertical-align: top;
+}
+.options-link{
+    text-align: center;
+    font-size: 14px;
+}
+.sort-control a{
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+.sort-control{
+    padding-left: 16px;
+}

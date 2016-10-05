@@ -1,0 +1,23 @@
+{
+   "background": {
+      "page": "bg.html"
+   },
+   "browser_action": {
+      "default_icon": "images/icon.png",
+      "default_popup": "popup.html",
+      "default_title": "Tab saver"
+   },
+   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self' ",
+   "description": "You could save opened tabs, if you may need them in future",
+   "icons": {
+      "128": "images/logo_128X128.png",
+      "48": "images/logo_48X48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCoH3o9JZLHpqspBhRVgfji4mj3FcUTHCIm1KxBPypA/jYjWIgynCNEqvlQP48dWIcw6SoHIJdLPkxzzc7jtIGmiP4O9j/Dyx5zTOYdEmXGe8WJnaQvGxNgmQD8JCejsXjaA7Bk8BMvKNKX96KnLI6x/UpWipAuiZ+sI5wh/TQk8QIDAQAB",
+   "manifest_version": 2,
+   "name": "Tabs saver",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "unlimitedStorage", "https://apis.google.com/*", "https://www.googleapis.com/*", "https://drive.google.com/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.5.4"
+}

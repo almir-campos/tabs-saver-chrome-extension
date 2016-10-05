@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tabs Saver configure page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/StatusMessanger.js" type="text/javascript"></script>
+        <script src="js/options.js" type="text/javascript"></script>
+        <script src="js/htmlTabs.js" type="text/javascript"></script>
+        <script src="js/Drive.js" type="text/javascript"></script>
+        <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="css/options.css" type="text/css" rel="stylesheet" >
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    </head>
+    <body>
+        <div id="main" class="container">
+            <nav class="tabs">
+                <ul>
+                    <li class="import btn btn-info">
+                        Import
+                    </li>
+                    <li class="settings btn btn-info">
+                        Settings
+                    </li>
+                    <li class="hints btn btn-info">
+                        Hints
+                    </li>
+                    <li class="donate btn btn-info">
+                      Donate
+                    </li>
+                </ul>
+            </nav>
+            <ul class="content form-inline">
+                <li class="import">
+                    <legend>Import</legend>
+                    <fieldset class="content bg-gray">
+                        <div class="form-group">
+                          <h4>Local disk operations</h4>
+                          <label>Tabs groups file</label>
+                          <input type="file" name="tabs_data" class="form-control">
+                          <input type ="button" name="import-button" value="Import Data" class="btn btn-success">
+                          <p class="help-bloc">Select tabs groups file on your local disk</p>
+                          <a id="download-link" href="" download="tabssaver_data.tsd">Download tabs Data</a> to your local disk
+                        </div>
+                        <div class="form-group last">
+                            <h4>Google Drive operations</h4>
+                            <div id="files_list">Loading stored files list...</div>
+                            <div class="info"></div>
+                            <label>Exported file name:</label>
+                            <input type ="text" name="file_title" class="form-control" value="tabssaver-data">
+                            <input type ="button" name="drive-export-button" value="Export tabs" class="btn btn-success">
+                            <p class="help-bloc">Send all your tabs groups in one file to your Google Drive</p>
+                            <div><a href="https://drive.google.com" target="_blank">Go to Google Drive</a></div>
+                        </div>
+                    </fieldset>
+                </li>
+                <li class="settings">
+                    <legend>Settings</legend>
+                    <fieldset class="content bg-gray">
+                        <label><input type="checkbox" value="1" name="facebook" checked/>Show facebook "like" plugin</label>
+                        <label><input type="checkbox" value="1" name="newWindow" />Always open tabs in new window</label>
+                        <label><input type="checkbox" value="1" name="alwaysAdd" />Don't close opened tabs after open saved group</label>
+                        <label>Main popup window width <input type="text" size="3" class="form-control main-width" value="375" name="main_width" /> px</label>
+                        <!--<label><input type="checkbox" value="1" name="drive" checked/>Synhronize tabs groups with google drive</label>-->
+                    </fieldset>
+                </li>
+                <li class="hints">
+                    <legend>Hints</legend>
+                    <fieldset class="content bg-gray">
+                        <ul class="list">
+                            <li>
+                                Click on gear icon <img src="/images/Gear.png" /> near tabs group name to get group control menu, where:
+                            </li>
+                            <li>
+                                <p><img src="/images/delete_icon.png" /> Cross icon - deleting group</p>
+                                <p><img src="/images/plus_icon.png" /> Plus icon - add selected tab in window to the group</p>
+                                <p><img src="/images/save_icon.gif" /> Disk icon - update group with the current opened tabs in window</p>
+                                <p><img src="/images/Icon_Rename.gif" /> Select cursor icon - rename group</p>
+                            </li>
+                            <li>
+                                Use ctrl+click or middle mouse button if you do not need close already opened tabs and open one of saved tabs group.
+                            </li>
+                            <li>
+                                Use shift+click if you wanna open tabs group in new window when default mode is used.
+                                Use shift+click if you wanna open tabs group in current window when "new window" mode is used.
+                            </li>
+                            <li>
+                                You may use "enter" key when you rename, or save tabs group.
+                            </li>
+                        </ul>
+                    </fieldset>
+                  </li>
+                <li class="donate">
+                    <legend>Donate</legend>
+                    <fieldset class="content bg-gray">
+                      <fieldset>
+                        <legend>Donate with Paypal</legend>
+                        <label>Donate 1$</label>
+                        <script src="/js/paypal-button.min.js?merchant=SXPCSPCG2DGNQ"
+                                data-button="donate"
+                                data-currency="USD"
+                                data-name="Tabs Saver"
+                                data-amount="1.00">
+                        </script>
+                        <label>Donate 5$</label>
+                        <script src="/js/paypal-button.min.js?merchant=SXPCSPCG2DGNQ"
+                                data-button="donate"
+                                data-currency="USD"
+                                data-name="Tabs Saver"
+                                data-amount="5.00">
+                        </script>
+                        <label>Donate 10$</label>
+                        <script src="/js/paypal-button.min.js?merchant=SXPCSPCG2DGNQ"
+                                data-button="donate"
+                                data-currency="USD"
+                                data-name="Tabs Saver"
+                                data-amount="10.00">
+                        </script>
+                      </fieldset>
+                      <fieldset>
+                        <legend>Donate with Skrill (Moneybookers)</legend>
+                        <form action="https://www.moneybookers.com/app/payment.pl" method="post" target="_blank">
+                          <input type="hidden" name="pay_to_email" value="koralvas@gmail.com">
+                          Please enter the amount you would like to give<br>
+                          <input type="hidden" name="return_url" value="chrome-extension://kmabfaomlcjlnplkoflgenkmmpilmead/options.html">
+                          <input type="hidden" name="language" value="EN">
+                          <label>Select a currency</label>
+                          <select name="currency" size="1">
+                            <option value="USD">US dollar</option>
+                            <option value="GBP">GB pound</option>
+                            <option value="EUR">Euro</option>
+                            <option value="JPY">Yen</option>
+                            <option value="CAD">Canadian $</option>
+                            <option value="AUD">Australian $</option>
+                          </select>
+                          <br>amount:
+                          <!--<input type="hidden" name="amount" value="5.00″>-->
+                          <input type="text" name="amount" value="5.00" size="10">
+                          <input type="hidden" name="detail1_description" value="Donate to Tabs Saver">
+
+                          <input type="hidden" name="detail1_text" value="Your donation helps me to continue Tabs Saver support and development of new features">
+                          <br>
+                          <br>
+                          <input type="submit" alt="Make a donation to Tabs Saver" value="Donate!" />
+                        </form>
+                      </fieldset>
+                  </fieldset>
+                </li>
+            </ul>
+          <div id="status"></div>
+        </div>
+    </body>
+</html>
